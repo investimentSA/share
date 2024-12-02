@@ -1,98 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGCZQX1HE1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-DGCZQX1HE1');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Earn $100 by sharing our link on social media and completing a simple offer! Follow the steps and get paid.">
-    <meta name="keywords" content="earn money, viral challenge, social media share, rewards, $100, CPA offers">
+    <meta name="description" content="Share the link, complete a simple offer, and claim $100! Easy, fast, and secure.">
+    <meta name="keywords" content="make money online, earn fast, social media offers, $100 reward, viral challenge">
     <meta name="robots" content="index, follow">
-    <title>Viral Challenge – Earn $100 Fast!</title>
+    <title>Viral Challenge – Claim $100 Fast!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
-            font-family: Arial, sans-serif;
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         .hero-section {
-            background-color: #28a745;
+            background: linear-gradient(90deg, #28a745, #218838);
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-radius: 10px;
-            margin: 20px 0;
+            border-radius: 8px;
+            margin: 20px auto;
         }
         .hero-section h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
         }
         .cta-btn {
             background-color: #ffc107;
             color: #333;
-            font-weight: bold;
-            font-size: 1.5rem;
-            padding: 15px 40px;
+            padding: 14px 40px;
+            border: none;
             border-radius: 50px;
+            font-weight: bold;
             text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
         }
         .cta-btn:hover {
             background-color: #ff9800;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: scale(1.05);
+            transform: translateY(-3px);
         }
         .steps, .message-box {
-            background: #fff;
-            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            margin: 20px 0;
         }
         .steps h2, .message-box h2 {
-            color: #28a745;
             font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        .steps ol, .message-box p {
-            font-size: 1.2rem;
-            color: #333;
-            padding-left: 20px;
-        }
-        .message-box textarea {
-            width: 100%;
-            height: 150px;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .countdown {
-            font-size: 1.5rem;
-            color: red;
-            margin-top: 15px;
+            color: #28a745;
         }
         footer {
             background-color: #343a40;
-            color: white;
-            padding: 20px 0;
+            color: #ffffff;
             text-align: center;
-            font-size: 0.9rem;
+            padding: 20px 0;
         }
         footer a {
             color: #ffc107;
@@ -101,113 +75,125 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .countdown {
+            font-size: 1.4rem;
+            color: red;
+            margin-top: 10px;
+        }
+        .share-message {
+            background-color: #f7f7f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .message-box img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 
 <!-- Hero Section -->
-<div class="container mt-5">
+<section class="container">
     <div class="hero-section">
-        <h1>🎉 Earn $100 by Sharing & Completing an Offer!</h1>
-        <p>Complete the offer and share your link on social media to claim $100! Follow the simple steps below.</p>
-        <!-- Button leads to the message-sharing section -->
-        <a href="#offerSection" class="cta-btn">Get Started Now!</a>
-        <div class="countdown" id="countdown"></div>
+        <h1>🎉 Claim $100 Fast! 🎉</h1>
+        <p>Complete a simple offer, share the link, and receive $100 quickly! It's easy, secure, and fun!</p>
+        <a href="#stepsSection" class="cta-btn" aria-label="Get Started">Get Started Now</a>
+        <div class="countdown" id="mainCountdown">Offer expires in: 03:00</div>
     </div>
-</div>
+</section>
+
+<!-- Proof of Payment Section -->
+<section id="proofSection" class="container">
+    <div class="message-box">
+        <h2>💸 Proof of Payment</h2>
+        <p>Here’s proof that $100 has been sent to one of our participants! Complete the steps and join the winners list!</p>
+        <img src="https://www.paypal-community.com/t5/image/serverpage/image-id/77097i79FB6E962937CA18?v=v2" 
+             alt="Proof of $100 payment">
+    </div>
+</section>
 
 <!-- Steps Section -->
-<div class="container mt-4">
+<section id="stepsSection" class="container">
     <div class="steps">
-        <h2>How to Participate:</h2>
+        <h2>📝 How to Participate:</h2>
         <ol>
-            <li>Click the "Get Started Now!" button to access the offer page.</li>
-            <li>Complete the offer from <a href="https://superfolder.net/pauldev" target="_blank">here</a>.</li>
-            <li>Once you complete the offer, copy the message below and share it on your social media (Instagram, Facebook, Twitter, etc.).</li>
-            <li>Send us a screenshot of your post along with the link and your preferred payment method to <strong>wbtpaul@gmail.com</strong>.</li>
+            <li>Click "Get Started" to access the offer.</li>
+            <li>Complete the offer from <a href="https://superfolder.net/pauldev" target="_blank" aria-label="Go to the offer">this link</a>.</li>
+            <li>Copy and share the pre-filled message on your social media (e.g., Instagram, Twitter).</li>
+            <li>Send proof (screenshot + link) to <strong>wbtpaul@gmail.com</strong> with your preferred payment method.</li>
         </ol>
     </div>
-</div>
+</section>
 
 <!-- Offer Section -->
-<div id="offerSection" class="container mt-4">
+<section id="offerSection" class="container">
     <div class="message-box">
         <h2>Step 1: Complete the Offer</h2>
-        <p>Click the link below to complete the offer and earn points:</p>
-        <a href="https://superfolder.net/pauldev" class="cta-btn" target="_blank">Complete Offer & Earn $100</a>
-        <div class="countdown" id="offerCountdown"></div>
+        <p>Click below to complete your offer and unlock your $100 reward!</p>
+        <a href="https://superfolder.net/pauldev" target="_blank" class="cta-btn" aria-label="Complete the offer">Complete Offer</a>
+        <div class="countdown" id="offerCountdown">Offer expires in: 03:00</div>
     </div>
-</div>
+</section>
 
-<!-- Message to Share Section -->
-<div class="container mt-4">
+<!-- Copy and Share Section -->
+<section class="container">
     <div class="message-box">
-        <h2>Step 2: Copy and Share This Message:</h2>
-        <p>Simply copy this message and post it on your social media. Make sure your post is public so we can verify it!</p>
-        <textarea readonly id="shareText">
-🚨EARN $100 FAST🚨
-Get paid $100 by simply completing a simple offer and sharing this link:
+        <h2>Step 2: Copy & Share</h2>
+        <p>Copy this message and share it publicly on your social media:</p>
+        <textarea id="shareText" readonly aria-label="Message to share">
+🚨 Earn $100 Fast! 🚨
+Simply complete this offer and share your unique link:
 🔗 [https://investimentsa.github.io/share/]
-🔥 Complete the offer and share the link to earn! 🔥
-
-Send a screenshot of your post to wbtpaul@gmail.com to claim your reward!
+🎉 Send proof to wbtpaul@gmail.com and claim your reward!
         </textarea>
-        <button class="cta-btn" onclick="copyToClipboard()">Copy and Share</button>
+        <button class="cta-btn" onclick="copyToClipboard()" aria-label="Copy to clipboard">Copy Message</button>
     </div>
-</div>
+</section>
 
 <!-- Footer -->
 <footer>
     <p>© 2024 EarnMoreNow. All rights reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    <p><a href="#" aria-label="Privacy Policy">Privacy Policy</a> | <a href="#" aria-label="Terms and Conditions">Terms & Conditions</a></p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
+<!-- JS -->
 <script>
-    // Countdown Timer for the main page
-    let timeLeft = 180; // 3 minutes in seconds
-    const countdownEl = document.getElementById("countdown");
+    // Countdown timer
+    function startCountdown(id, duration) {
+        const countdownEl = document.getElementById(id);
+        let timeLeft = duration;
 
-    setInterval(() => {
-        if (timeLeft <= 0) {
-            countdownEl.textContent = "Offer expired!";
-        } else {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            countdownEl.textContent = `Offer expires in: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-            timeLeft--;
-        }
-    }, 1000);
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countdownEl.textContent = "Offer expired!";
+            } else {
+                const minutes = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+                const seconds = (timeLeft % 60).toString().padStart(2, '0');
+                countdownEl.textContent = `Offer expires in: ${minutes}:${seconds}`;
+                timeLeft--;
+            }
+        }, 1000);
+    }
 
-    // Countdown Timer for the offer section
-    let offerTimeLeft = 180;
-    const offerCountdownEl = document.getElementById("offerCountdown");
+    startCountdown("mainCountdown", 180);
+    startCountdown("offerCountdown", 180);
 
-    setInterval(() => {
-        if (offerTimeLeft <= 0) {
-            offerCountdownEl.textContent = "Offer expired!";
-        } else {
-            const minutes = Math.floor(offerTimeLeft / 60);
-            const seconds = offerTimeLeft % 60;
-            offerCountdownEl.textContent = `Offer expires in: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-            offerTimeLeft--;
-        }
-    }, 1000);
-
-    // Copy text to clipboard function
+    // Copy to clipboard
     function copyToClipboard() {
-        const textArea = document.getElementById('shareText');
-        textArea.select();
-        textArea.setSelectionRange(0, 99999); // For mobile devices
-        navigator.clipboard.writeText(textArea.value).then(() => {
-            alert('Message copied! Now share it on your social media!');
-        }).catch(err => {
-            alert('Failed to copy. Please try manually.');
-        });
+        const text = document.getElementById("shareText");
+        navigator.clipboard.writeText(text.value)
+            .then(() => alert("Message copied successfully!"))
+            .catch(() => alert("Failed to copy. Try manually."));
     }
 </script>
 
 </body>
 </html>
+
