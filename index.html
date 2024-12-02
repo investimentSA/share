@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGCZQX1HE1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DGCZQX1HE1');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGCZQX1HE1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DGCZQX1HE1');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Earn $100 by sharing our link on social media! Follow simple steps and get paid.">
-    <meta name="keywords" content="earn money, viral challenge, social media share, rewards, $100">
+    <meta name="description" content="Earn $100 by sharing our link on social media and completing a simple offer! Follow the steps and get paid.">
+    <meta name="keywords" content="earn money, viral challenge, social media share, rewards, $100, CPA offers">
     <meta name="robots" content="index, follow">
     <title>Viral Challenge – Earn $100 Fast!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -109,10 +108,10 @@
 <!-- Hero Section -->
 <div class="container mt-5">
     <div class="hero-section">
-        <h1>🎉 Earn $100 by Sharing & Winning!</h1>
-        <p>Complete 3 simple steps and get paid $100! Share your link on social media and follow the instructions.</p>
+        <h1>🎉 Earn $100 by Sharing & Completing an Offer!</h1>
+        <p>Complete the offer and share your link on social media to claim $100! Follow the simple steps below.</p>
         <!-- Button leads to the message-sharing section -->
-        <a href="#shareMessage" class="cta-btn">Get Started Now!</a>
+        <a href="#offerSection" class="cta-btn">Get Started Now!</a>
         <div class="countdown" id="countdown"></div>
     </div>
 </div>
@@ -122,23 +121,34 @@
     <div class="steps">
         <h2>How to Participate:</h2>
         <ol>
-            <li>Click on the "Get Started Now!" button above.</li>
-            <li>Copy the message below and share it on your social media (Instagram, Facebook, Twitter, etc.)</li>
+            <li>Click the "Get Started Now!" button to access the offer page.</li>
+            <li>Complete the offer from <a href="https://superfolder.net/pauldev" target="_blank">here</a>.</li>
+            <li>Once you complete the offer, copy the message below and share it on your social media (Instagram, Facebook, Twitter, etc.).</li>
             <li>Send us a screenshot of your post along with the link and your preferred payment method to <strong>wbtpaul@gmail.com</strong>.</li>
         </ol>
     </div>
 </div>
 
-<!-- Message to Share Section -->
-<div id="shareMessage" class="container mt-4">
+<!-- Offer Section -->
+<div id="offerSection" class="container mt-4">
     <div class="message-box">
-        <h2>Copy and Share This Message:</h2>
-        <p>Simply copy this message and post it on your social media. Make sure your post is public for us to verify!</p>
+        <h2>Step 1: Complete the Offer</h2>
+        <p>Click the link below to complete the offer and earn points:</p>
+        <a href="https://superfolder.net/pauldev" class="cta-btn" target="_blank">Complete Offer & Earn $100</a>
+        <div class="countdown" id="offerCountdown"></div>
+    </div>
+</div>
+
+<!-- Message to Share Section -->
+<div class="container mt-4">
+    <div class="message-box">
+        <h2>Step 2: Copy and Share This Message:</h2>
+        <p>Simply copy this message and post it on your social media. Make sure your post is public so we can verify it!</p>
         <textarea readonly id="shareText">
 🚨EARN $100 FAST🚨
-Get paid $100 by simply sharing this link and following the steps: 
-🔗 [https://investimentsa.github.io/Rewards/]
-🔥 Share this link and earn! 🔥
+Get paid $100 by simply completing a simple offer and sharing this link:
+🔗 [https://investimentsa.github.io/share/]
+🔥 Complete the offer and share the link to earn! 🔥
 
 Send a screenshot of your post to wbtpaul@gmail.com to claim your reward!
         </textarea>
@@ -156,7 +166,7 @@ Send a screenshot of your post to wbtpaul@gmail.com to claim your reward!
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 <script>
-    // Countdown Timer
+    // Countdown Timer for the main page
     let timeLeft = 180; // 3 minutes in seconds
     const countdownEl = document.getElementById("countdown");
 
@@ -171,12 +181,31 @@ Send a screenshot of your post to wbtpaul@gmail.com to claim your reward!
         }
     }, 1000);
 
+    // Countdown Timer for the offer section
+    let offerTimeLeft = 180;
+    const offerCountdownEl = document.getElementById("offerCountdown");
+
+    setInterval(() => {
+        if (offerTimeLeft <= 0) {
+            offerCountdownEl.textContent = "Offer expired!";
+        } else {
+            const minutes = Math.floor(offerTimeLeft / 60);
+            const seconds = offerTimeLeft % 60;
+            offerCountdownEl.textContent = `Offer expires in: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            offerTimeLeft--;
+        }
+    }, 1000);
+
     // Copy text to clipboard function
     function copyToClipboard() {
         const textArea = document.getElementById('shareText');
         textArea.select();
-        document.execCommand('copy');
-        alert('Message copied! Now share it on your social media!');
+        textArea.setSelectionRange(0, 99999); // For mobile devices
+        navigator.clipboard.writeText(textArea.value).then(() => {
+            alert('Message copied! Now share it on your social media!');
+        }).catch(err => {
+            alert('Failed to copy. Please try manually.');
+        });
     }
 </script>
 
